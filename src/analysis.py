@@ -54,3 +54,35 @@ plt.savefig("../outputs/charts/revenue_by_product.png")
 plt.close()
 
 print("\nCharts saved in outputs/charts/")
+
+# -------- Advanced Analytics 1: Monthly Revenue Trend --------
+
+df["order_month"] = df["order_date"].dt.to_period("M")
+
+monthly_revenue = df.groupby("order_month")["revenue"].sum().reset_index()
+
+print("\nMonthly Revenue Trend:")
+print(monthly_revenue)
+
+
+# -------- Advanced Analytics 2: Revenue Contribution % by Region --------
+
+total_revenue = df["revenue"].sum()
+
+revenue_contribution = revenue_by_region.copy()
+revenue_contribution["contribution_pct"] = (
+    revenue_contribution["revenue"] / total_revenue * 100
+)
+
+print("\nRevenue Contribution by Region (%):")
+print(revenue_contribution)
+
+
+# -------- Advanced Analytics 3: Top Revenue Driver --------
+
+top_product = revenue_by_product.sort_values(by="revenue", ascending=False).iloc[0]
+
+print(
+    f"\nTop Revenue Driver: {top_product['product']} "
+    f"with revenue {top_product['revenue']}"
+)
