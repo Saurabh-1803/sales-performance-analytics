@@ -18,3 +18,30 @@
 - **Business Action:**  
   - Strengthen underperforming regions (East, West)  
   - Run targeted promotions to balance revenue streams
+
+## Advanced Analytics
+
+### Monthly Revenue Trend
+- Revenue shows variation across months, indicating demand fluctuations.
+- Useful for forecasting and capacity planning.
+
+### Revenue Contribution Analysis
+- Certain regions contribute disproportionately to total revenue.
+- Helps prioritize regional investments.
+
+### Top Revenue Driver
+- Identified the highest revenue-generating product.
+- Enables focused marketing and inventory decisions.
+
+## SQL Analytics
+
+This project includes a full SQL-based analytics pipeline.
+
+### SQL Capabilities Demonstrated
+- Revenue KPIs using aggregate functions
+- Grouping and filtering for regional/product analysis
+- Monthly revenue trend analysis
+- Revenue contribution percentage calculations
+- Identification of top revenue drivers
+
+Tools: MySQL / PostgreSQL compatible SQL
